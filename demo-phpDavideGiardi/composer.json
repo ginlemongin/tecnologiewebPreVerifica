@@ -1,0 +1,19 @@
+{
+    "name": "enaip/demo",
+    "description": "Pacchetto prova",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Enaip\\Demo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Davide Morolli"
+        }
+    ],
+    "require": {
+        "ramsey/uuid": "^4.7"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "enaip/demo",
+    "description": "Pacchetto prova",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Enaip\\Demo\\": "src/"
+        }
+    },
+    "require": {
+        "ramsey/uuid": "^4.7"
+    }
+}
