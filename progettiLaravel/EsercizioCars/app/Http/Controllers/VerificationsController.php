@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\verification;
 
-class verificationController extends Controller {
+class VerificationsController extends Controller {
 
     public function create(Request $request){
         $validator = Validator::make($request->all(), [

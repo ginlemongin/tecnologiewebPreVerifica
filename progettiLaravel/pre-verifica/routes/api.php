@@ -39,7 +39,7 @@ La risorsa Verification (tabella: verifications) possiede i seguenti campi
 - car_id UNSIGNED BIG INTEGER, Foreign Key su tabella cars
 - check_date DATE
 
-Per la tipologia DATE fare riferimento alla documentazione online di Laravel 
+Per la tipologia DATE fare riferimento alla documentazione online di Laravel
 per l'apposito datatype sulle migrazioni e sull'apposita regola di validazione.
 
 Si chiede di:
@@ -51,10 +51,11 @@ Si chiede di:
 - creare le apposite rotte
  */
 
+
  //rotte per auto
  //POST http://localhost:8000/api/users
 Route::post('/cars', [carsController::class, 'create']);
-//DELETE http://localhost:8000/api/users/7 
+//DELETE http://localhost:8000/api/users/7
 Route::delete('/cars/{id}', [carsController::class, 'delete']);
 //GET http://localhost:8000/api/users/3
 Route::get('/cars/{id}', [carsController::class, 'read']);
@@ -66,7 +67,7 @@ Route::put('/cars/{id}', [carsController::class, 'update']);
 //rotte per controlli
 //POST http://localhost:8000/api/users
 Route::post('/verifications', [verificationsController::class, 'create']);
-//DELETE http://localhost:8000/api/users/7 
+//DELETE http://localhost:8000/api/users/7
 Route::delete('/verifications/{id}', [verificationsController::class, 'delete']);
 //GET http://localhost:8000/api/users/3
 Route::get('/verifications/{id}', [verificationsController::class, 'read']);

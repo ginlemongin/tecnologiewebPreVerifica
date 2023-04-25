@@ -1,7 +1,7 @@
 <?php
 // USER CONTROLLER
-// è il file che contiene le logiche, 
-// ad es controlla quello che gli arriva dalle REST API 
+// è il file che contiene le logiche,
+// ad es controlla quello che gli arriva dalle REST API
 // che ricevono i dati da un qualsiasi client e li valida
 // per vedere se possono essere inseriti nel mio database
 
@@ -24,7 +24,7 @@ class UserController0 extends Controller
         // name VARCHAR(255)
         // surname VARCHAR(255)
         // age INTEGER
-        // title VARCHAR (255) DEFAULT NULL 
+        // title VARCHAR (255) DEFAULT NULL
         // (mr, mrs, ms, etc, default null significa che non è un campo obbligatorio)
 
         $validator = Validator::make(
@@ -36,7 +36,7 @@ class UserController0 extends Controller
                 'username' => 'required|max:255',
                 // questo è un modo per impostare una regola di validazione
                 'email' => ['required', 'max:255', 'email'],
-                // con l'array è un altro modo per impostare regole 
+                // con l'array è un altro modo per impostare regole
                 // (email è una regola di validazione che controlla che il formato sia quello giusto con la chiocciola)
                 'name' => ['required', 'max:255'],
                 'surname' => ['required', 'max:255'],
@@ -76,7 +76,7 @@ class UserController0 extends Controller
     "email": "lmfao@mail.com",
     "age": 40
 }!*/
- 
+
 
 // andrà a buon fine perche supera la validazione e inserisce con POST il nuovo utente
 // se i dati inseriti nel body non superano la validazione mi restituisce un JSON
@@ -144,7 +144,7 @@ class UserController extends Controller
         // }
 
         // attenzione: grazie al validator potrò inserire nel body della request
-        // solo un utente che rispetti tutti i campi della tabella, altrimenti 
+        // solo un utente che rispetti tutti i campi della tabella, altrimenti
         // risponderà con un errore
 
         // una cosa buona e giusta è restituire in una risposta di una create
@@ -180,9 +180,9 @@ class UserController extends Controller
         //$id=3
 
         //Operazione di SELECT su DB
-        // creo una variabile dentro la quale ci inserisco 
+        // creo una variabile dentro la quale ci inserisco
         // i dati della riga specifica che voglio leggere
-        // id sarà quello che inserisco nell'URI 
+        // id sarà quello che inserisco nell'URI
         $user = User::findOrFail($id);
         // find or fail prendere quel risultato e se non c'è fallisce e da 404
         // la variabile id prenderà il valore di quello che
@@ -220,7 +220,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //PUT http://localhost:8000/api/users/22
-        //$id=22     
+        //$id=22
 
         //https://laravel.com/docs/10.x/validation
         $validator = Validator::make($request->all(), [
