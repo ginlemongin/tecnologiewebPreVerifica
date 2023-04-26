@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class verification extends Model
+class Author extends Model
 {
     use HasFactory;
-
-    public function car()
+    public function books()
     {
-        return $this->belongsTo(car::class, 'id');
+        return $this->hasMany(Book::class);
     }
 }

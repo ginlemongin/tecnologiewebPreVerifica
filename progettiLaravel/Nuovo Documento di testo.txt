@@ -1,0 +1,54 @@
+Creare un sistema di REST API in Laravel per la gestione delle risorse:
+- libri (books)
+- editori (editors)
+- autori (authors)
+
+Ogni libro può avere un solo editore ed un solo autore. Un editore può pubblicare più libri; un autore può scrivere più libri.
+
+La risorsa Book (tabella: books) possiede i seguenti campi:
+- id
+- title VARCHAR(100)
+- num_pages INTEGER
+- abstract VARCHAR(255)
+- editor_id UNSIGNED BIG INTEGER, Foreign Key su tabella editors
+- author_id UNSIGNED BIG INTEGER, Foreign Key su tabella authors
+
+La risorsa Editor (tabella: editors) possiede i seguenti campi
+- id
+- name VARCHAR(100)
+- vat_number VARCHAR(20)
+
+La risorsa Author (tabella: authors) possiede i seguenti campi
+- id
+- name VARCHAR(100)
+- surname VARCHAR(100)
+
+
+Si chiede di:
+- creare un nuovo progetto Laravel
+- creare le apposite migrazioni
+- creare gli appositi modelli e relazioni
+- creare gli appositi controller
+- creare le apposite rotte
+
+Consegnare uno zip del progetto con tutti i file, ad eccezione della cartella vendor. Testare tutte le REST API implementate con POSTMan per verificarne il corretto funzionamento.
+
+
+
+{
+    "title" : "cacca",
+    "num_pages" : 2,
+    "abstract" : "fuosejklhglksjtvhas kjvrtavkjtgvbauyv4BRFVNYI",
+    "author_id":"1",
+    "editor_id":"1"
+}
+
+{
+    "name" : "Cazzo Editore",
+    "vat_number" : "AB76767"
+}
+
+{
+    "name" : "Mario",
+    "surname" : "Maroni"
+}

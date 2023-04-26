@@ -33,7 +33,7 @@ class carsController extends Controller
     public function read(Request $request, $id)
     {
         $car = car::findOrFail($id);
-        
+
         return response()->json($car);
     }
 
@@ -41,7 +41,7 @@ class carsController extends Controller
     public function readAll(Request $request)
     {
         $car= car::with('reviews')->get();
-        
+
         return response()->json($car,200);
     }
     */
@@ -59,7 +59,7 @@ class carsController extends Controller
             ], 400);
         }
 
-      
+
         $car = car::findOrFail($id);
         $car->targa = $request->input('targa');
         $car->chilometraggio = $request->input('chilometraggio');
@@ -72,10 +72,10 @@ class carsController extends Controller
     {
         $car = car::findOrFail($id);
         $car->delete();
-        
+
         return response()->json(null, 204);
     }
-    
+
 
 }
 
